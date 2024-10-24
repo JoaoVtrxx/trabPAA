@@ -1,3 +1,4 @@
+import time
 def merge_sort(arr, iteration=0):
     if len(arr) > 1:
         mid = len(arr) // 2  # Divide o array no meio
@@ -40,20 +41,35 @@ def merge_sort(arr, iteration=0):
     return iteration
 
 # Início
-arrMedio = [23, 7, 45, 12, 88, 34, 67, 56, 91, 11, 49, 72, 6, 39, 80]
-arrMelhor = [6, 7, 11, 12, 23, 34, 39, 45, 49, 56, 67, 72, 80, 88, 91]
-arrPior = [91,88,80,72,67,56,49,45,39,34,23,12,11,7,6]
+
+arrMedio = [11,12,22,90,34,25,64]
+arrMelhor = [11, 12, 22, 25, 34, 64, 90]
+arrPior = [90, 64, 34, 25, 22, 12, 11]
+
+##arrMedio = [23, 7, 45, 12, 88, 34, 67, 56, 91, 11, 49, 72, 6, 39, 80]
+##arrMelhor = [6, 7, 11, 12, 23, 34, 39, 45, 49, 56, 67, 72, 80, 88, 91]
+##arrPior = [91,88,80,72,67,56,49,45,39,34,23,12,11,7,6]
 print("\nMelhor caso")
 print("Array original:", arrMelhor)
-total_iterations = merge_sort(arrMelhor)
-print("Total de iterações:", total_iterations)
+start_time = time.time()
+merge_sort(arrMelhor)
+end_time = time.time()
+execution_time = end_time - start_time
+print(f"Tempo de execução: {execution_time} segundos")
 
 print("\nCaso Medio")
 print("Array original:", arrMedio)
-total_iterations = merge_sort(arrMedio)
-print("Total de iterações:", total_iterations)
+start_time = time.time()
+merge_sort(arrMedio)
+end_time = time.time()
+execution_time = end_time - start_time
+print(f"Tempo de execução: {execution_time} segundos")
 
 print("\nPior Caso")
 print("Array original:", arrPior)
-total_iterations = merge_sort(arrPior)
-print("Total de iterações:", total_iterations)
+start_time = time.time()
+merge_sort(arrPior)
+end_time = time.time()
+execution_time = end_time - start_time
+print(f"Tempo de execução: {execution_time} segundos")
+
