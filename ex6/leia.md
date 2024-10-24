@@ -22,5 +22,3 @@ Cada chamada recursiva é armazenada na pilha de chamadas, o que aumenta o uso d
 ### Conclusão Geral
 
 A escolha entre recursiva e iterativa depende mais do contexto: se a prioridade é a **legibilidade** do código ou a **eficiência de memória**.
-
-![Árvore de Recursão](https://exemplo.com/recursion_tree.png)
